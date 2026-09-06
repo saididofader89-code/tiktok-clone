@@ -24,11 +24,11 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Unzip project archive
+        run: unzip -o ezyZip.zip -d .
+
       - name: Install dependencies
         run: flutter pub get
-
-      - name: Unzip lib folder
-        run: unzip -o ezyZip.zip -d .
 
       - name: Build APK
         run: flutter build apk --release
